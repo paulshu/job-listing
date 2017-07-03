@@ -1,2 +1,6 @@
-<h1>Jobs#new</h1>
-<p>Find me in app/views/jobs/new.html.erb</p>
+<h1>Add a job</h1>
+<%= simple_form_for @job do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.submit "Submit" %>
+<% end %>
