@@ -7,11 +7,12 @@ Rails.application.routes.draw do
         post :publish
         post :hide
       end
+      resources :resumes, only: [:index]
     end
   end
 
   resources :jobs do
-    resources :resumes
+    resources :resumes, only: [:new, :create]
   end
 
   root 'jobs#index'
